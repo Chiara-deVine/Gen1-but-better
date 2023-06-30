@@ -574,9 +574,10 @@ OnixEvosMoves:
 	db 22, RAGE
 	db 26, GLARE
 	db 31, SLAM
-	db 35, ROCK_SLIDE
-	db 39, ROAR
-	db 43, EARTHQUAKE
+	db 35, BIND
+	db 39, ROCK_SLIDE
+	db 43, ROAR
+	db 45, EARTHQUAKE
 	db 0
 
 FearowEvosMoves:
