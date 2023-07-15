@@ -80,6 +80,8 @@ VictoryRoad2F_TextPointers:
 	dw BoulderText
 	dw BoulderText
 	dw BoulderText
+    dw HitmonTrade
+
 
 VictoryRoad2TrainerHeaders:
 	def_trainers
@@ -200,3 +202,18 @@ VictoryRoad2EndBattleText5:
 VictoryRoad2AfterBattleText5:
 	text_far _VictoryRoad2AfterBattleText5
 	text_end
+
+	HitmonTrade:
+        text_asm
+        CheckEvent EVENT_PICK_HITMONCHAN
+        jr nz, .pickedHitmonchan
+        ld a, TRADE_FOR_BRUCE
+        ld [wWhichTrade], a
+        predef DoInGameTradeDialogue
+        jr .done
+    .pickedHitmonchan
+        ld a, TRADE_FOR_JACKIE
+        ld [wWhichTrade], a
+        predef DoInGameTradeDialogue
+    .done
+        jp TextScriptEnd
