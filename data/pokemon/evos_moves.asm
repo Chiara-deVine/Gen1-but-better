@@ -693,11 +693,14 @@ HitmonchanEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 33, FIRE_PUNCH
+	db 33, SUBMISSION
+	db 37, FIRE_PUNCH
 	db 38, ICE_PUNCH
-	db 43, THUNDERPUNCH
+	db 39, THUNDERPUNCH
+	db 42, BODY_SLAM
+	db 45, MEDITATE
 	db 48, MEGA_PUNCH
-	db 53, COUNTER
+	db 50, COUNTER
 	db 0
 
 ArbokEvosMoves:
